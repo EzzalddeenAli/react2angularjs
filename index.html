@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>React 2 AngularJS</title>
+    <meta charset="UTF-8" />
+
+    <style type="text/css">
+      .react-tooltip-body {
+        border: 2px dashed black;
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div ng-app="myApp" ng-controller="myController as myCtrl">
+      <!-- React component -->
+      <react-tooltip
+        trigger="'hover'"
+        overlay="myCtrl.tooltip"
+        placement="'bottom'"
+      >
+        <!-- Angular bindings -->
+        <div class="react-tooltip-body">
+          <div>
+            <h2>Hover over me</h2>
+            <h3>AngularJS element wrapped in React Tooltip Component</h3>
+
+            <p>
+              <div>Input 1:</div>
+              Inside React Component with Angular Bindings
+              <input
+                placeholder="Try to change me..."
+                ng-model="myCtrl.input1"
+              />
+            </p>
+            <p>
+              <div>Input 2:</div>
+              Defined outside, used in React body, value of Input2 :
+              {{myCtrl.input2}}
+            </p>
+          </div>
+        </div>
+      </react-tooltip>
+
+      <br />
+      <div>
+        Input1: <br />
+        Outside , value of Input 1 : {{myCtrl.input1}}
+      </div>
+
+      <br />
+      <div>
+        Input2: <br />
+        Outside, Input 2:
+        <input placeholder="Try to change me..." ng-model="myCtrl.input2" />
+      </div>
+
+      <br />
+      <div></div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

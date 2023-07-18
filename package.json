@@ -1,0 +1,22 @@
+{
+  "name": "react-2-angularjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@material-ui/core": "4.9.7",
+    "angular": "1.6.10",
+    "rc-tooltip": "4.0.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react2angularjs": "1.0.0-beta.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
